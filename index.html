@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicios Javascript</title>
+</head>
+<body>
+
+  <h1>Ejercicios Javascript</h1>
+  <p>Selecciona un ejercicio y revisa la consola (F12).</p>
+
+  <button onclick="cargarEjercicio(1)">Ej 1</button>
+  <button onclick="cargarEjercicio(2)">Ej 2</button>
+  <button onclick="cargarEjercicio(3)">Ej 3</button>
+  <button onclick="cargarEjercicio(4)">Ej 4</button>
+  <button onclick="cargarEjercicio(5)">Ej 5</button>
+  <button onclick="cargarEjercicio(6)">Ej 6</button>
+  <button onclick="cargarEjercicio(7)">Ej 7</button>
+  <button onclick="cargarEjercicio(8)">Ej 8</button>
+  <button onclick="cargarEjercicio(9)">Ej 9</button>
+  <button onclick="cargarEjercicio(10)">Ej 10</button>
+  <button onclick="cargarEjercicio(11)">Ej 11</button>
+  <button onclick="cargarEjercicio(12)">Ej 12</button>
+  <button onclick="cargarEjercicio(13)">Ej 13</button>
+  <button onclick="cargarEjercicio(14)">Ej 14</button>
+  <button onclick="cargarEjercicio(15)">Ej 15</button>
+  <button onclick="cargarEjercicio(16)">Ej 16</button>
+  <button onclick="cargarEjercicio(17)">Ej 17</button>
+  <button onclick="cargarEjercicio(18)">Ej 18</button>
+  <button onclick="cargarEjercicio(19)">Ej 19</button>
+  <button onclick="cargarEjercicio(20)">Ej 20</button>
+  <button onclick="cargarEjercicio(21)">Ej 21</button>
+  <button onclick="cargarEjercicio(22)">Ej 22</button>
+  <button onclick="cargarEjercicio(23)">Ej 23</button>
+  <button onclick="cargarEjercicio(24)">Ej 24</button>
+  <button onclick="cargarEjercicio(25)">Ej 25</button>
+  <button onclick="cargarEjercicio(26)">Ej 26</button>
+  <button onclick="cargarEjercicio(27)">Ej 27</button>
+  <button onclick="cargarEjercicio(28)">Ej 28</button>
+  <button onclick="cargarEjercicio(29)">Ej 29</button>
+  <button onclick="cargarEjercicio(30)">Ej 30</button>
+  <button onclick="cargarEjercicio(31)">Ej 31</button>
+
+  <p id="texto">Ejercicio seleccionado: Ninguno</p>
+
+  <script>
+    function cargarEjercicio(num) {
+      document.getElementById("texto").innerText =
+        "Ejercicio seleccionado: " + num;
+
+     
+      let anterior = document.getElementById("scriptEjercicio");
+      if (anterior) {
+        anterior.remove();
+      }
+
+   
+      let script = document.createElement("script");
+      script.src = "ejercicios/ej_" + num + ".js";
+      script.id = "scriptEjercicio";
+
+      document.body.appendChild(script);
+
+      console.clear();
+      console.log("Ejecutando ejercicio " + num);
+    }
+  </script>
+
+</body>
+</html>
